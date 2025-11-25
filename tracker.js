@@ -4,7 +4,7 @@
 
 (async function() {
     // ⚠️ IMPORTANT: Replace this URL with your own Google Apps Script Web App URL
-    const WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbzzBlBRdTbpBzvXogc4w0BX57L64dx4CvgyZU9psXwkHcoljRG4k3p-vLYK7XZ6M6SRfg/exec';
+    const WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbxjcuWJOl7QimSZFbBiIFNwGGYeu0bshcRWFp-ep_xBLh8w_eTLCgft9-PU6-_4PIfQpQ/exec';
 
     // Function to get URL parameters
     function getURLParams() {

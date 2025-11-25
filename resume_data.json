@@ -1,0 +1,28 @@
+{
+  "education": {
+    "masters": {
+      "degree": "[Degree Name]",
+      "university": "[University Name]",
+      "graduationDate": "[Month Year or Expected Date]"
+    },
+    "undergraduate": {
+      "degree": "[Degree Name]",
+      "university": "[University Name]",
+      "graduationDate": "[Month Year]"
+    }
+  },
+  "internships": [
+    {
+      "company": "[Company/Organization Name]",
+      "jobTitle": "[Job Title]",
+      "startDate": "[Month Year]",
+      "endDate": "[Month Year]",
+      "responsibilities": [
+        "[Key responsibility/achievement 1]",
+        "[Key responsibility/achievement 2]",
+        "[Key responsibility/achievement 3]"
+      ]
+    }
+  ],
+  "notes": "Fill in the bracketed placeholders with your actual resume information"
+}

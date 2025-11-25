@@ -126,3 +126,52 @@ window.addEventListener('scroll', () => {
         navbar.style.boxShadow = 'var(--shadow-sm)';
     }
 });
+
+// Local video modal handling for links with data-video
+document.addEventListener('click', function (e) {
+    const btn = e.target.closest('a[data-video]');
+    if (!btn) return;
+    e.preventDefault();
+
+    const videoUrl = btn.getAttribute('data-video');
+    const modal = document.getElementById('videoModalLocal');
+    const backdrop = document.getElementById('videoModalBackdrop');
+    const closeBtn = document.getElementById('videoModalClose');
+    const video = document.getElementById('localVideo');
+    const source = document.getElementById('localVideoSource');
+
+    source.src = videoUrl;
+    video.load();
+    video.currentTime = 0;
+    // autoplay if allowed
+    const playPromise = video.play();
+    if (playPromise !== undefined) {
+        playPromise.catch(() => { /* autoplay blocked, user can press play */ });
+    }
+
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+
+    function closeModal() {
+        video.pause();
+        source.src = '';
+        video.load();
+        modal.classList.remove('open');
+        modal.setAttribute('aria-hidden', 'true');
+        cleanup();
+    }
+
+    function onKey(e) {
+        if (e.key === 'Escape') closeModal();
+    }
+
+    function cleanup() {
+        backdrop.removeEventListener('click', closeModal);
+        closeBtn.removeEventListener('click', closeModal);
+        document.removeEventListener('keydown', onKey);
+    }
+
+    backdrop.addEventListener('click', closeModal);
+    closeBtn.addEventListener('click', closeModal);
+    document.addEventListener('keydown', onKey);
+});

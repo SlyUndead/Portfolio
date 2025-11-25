@@ -251,7 +251,8 @@
                         <span class="tag">JavaScript</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" class="project-link">Details</a>
+                        <a href="https://github.com/SlyUndead/Obscene-Content-Blocker" class="project-link" target="_blank" rel="noopener">GitHub</a>
+                        <!-- <a href="#" data-video="videos/safeview-demo.mp4" class="project-link">Live Demo</a> -->
                     </div>
                 </div>
 
@@ -267,7 +268,8 @@
                         <span class="tag">CNN</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" class="project-link">Details</a>
+                        <!-- <a href="https://github.com/SlyUndead/waveshare" class="project-link" target="_blank" rel="noopener">GitHub</a> -->
+                        <!-- <a href="#" data-video="videos/waveshare-demo.mp4" class="project-link">Live Demo</a> -->
                     </div>
                 </div>
 
@@ -282,7 +284,8 @@
                         <span class="tag">Computer Vision</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" class="project-link">Details</a>
+                        <a href="https://github.com/SlyUndead/ASL" class="project-link" target="_blank" rel="noopener">GitHub</a>
+                        <!-- <a href="#" data-video="videos/asl-demo.mp4" class="project-link">Live Demo</a> -->
                     </div>
                 </div>
 
@@ -297,7 +300,8 @@
                         <span class="tag">markovify</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" class="project-link">Details</a>
+                        <a href="https://github.com/SlyUndead/Sentence-Generator" class="project-link" target="_blank" rel="noopener">GitHub</a>
+                        <!-- <a href="#" data-video="videos/sentence-generator-demo.mp4" class="project-link">Live Demo</a> -->
                     </div>
                 </div>
 
@@ -312,7 +316,8 @@
                         <span class="tag">SPSS</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" class="project-link">Details</a>
+                        <!-- <a href="https://github.com/SlyUndead/campus-statistics" class="project-link" target="_blank" rel="noopener">GitHub</a> -->
+                        <a href="#" data-video="videos/Stats Book.pdf" class="project-link">Live Demo</a>
                     </div>
                 </div>
             </div>
@@ -373,5 +378,18 @@
 
     <script src="script.js"></script>
     <script src="tracker.js"></script>
+    <!-- Local Video Modal -->
+    <div id="videoModalLocal" class="video-modal" aria-hidden="true">
+        <div class="video-modal-backdrop" id="videoModalBackdrop"></div>
+        <div class="video-modal-content">
+            <button id="videoModalClose" class="video-modal-close" aria-label="Close video">✕</button>
+            <div class="video-wrapper">
+                <video id="localVideo" controls playsinline preload="metadata">
+                    <source id="localVideoSource" src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
